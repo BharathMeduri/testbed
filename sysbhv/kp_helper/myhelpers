@@ -1,0 +1,3 @@
+lsmod |grep '^helper_kp'
+tail -n20 /sys/kernel/debug/tracing/trace
+
