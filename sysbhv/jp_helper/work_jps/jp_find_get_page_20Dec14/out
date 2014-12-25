@@ -1,0 +1,46 @@
+Dynamic Makefile:
+Building for ARCH  and KERNELRELEASE 
+make -C /lib/modules/3.13.0-43-generic/build  M=<path>modules
+make[1]: Entering directory `/usr/src/linux-headers-3.13.0-43-generic'
+  CC [M]  <path>jp_find_get_page_20Dec14/jp_find_get_page_20Dec14.o
+In file included from <path>jp_find_get_page_20Dec14/convenient.h:19:0,
+                 from <path>jp_find_get_page_20Dec14/jp_find_get_page_20Dec14.c:28:
+<path>jp_find_get_page_20Dec14/jp_find_get_page_20Dec14.c: In function ‘jp_find_get_page’:
+include/linux/ratelimit.h:22:9: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 5 has type ‘loff_t’ [-Wformat=]
+  struct ratelimit_state name = {     \
+         ^
+include/linux/printk.h:311:9: note: in expansion of macro ‘DEFINE_RATELIMIT_STATE’
+  static DEFINE_RATELIMIT_STATE(_rs,    \
+         ^
+<path>jp_find_get_page_20Dec14/convenient.h:55:9: note: in expansion of macro ‘printk_ratelimited’
+         printk_ratelimited (KERN_INFO pr_fmt(string), ##args);  \
+         ^
+<path>jp_find_get_page_20Dec14/convenient.h:67:4: note: in expansion of macro ‘DBGPRINT’
+    DBGPRINT("%s:%d : " string, __FUNCTION__, __LINE__, ##args);      \
+    ^
+<path>jp_find_get_page_20Dec14/jp_find_get_page_20Dec14.c:62:3: note: in expansion of macro ‘MSG’
+   MSG("host inode : "
+   ^
+include/linux/ratelimit.h:22:9: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 5 has type ‘loff_t’ [-Wformat=]
+  struct ratelimit_state name = {     \
+         ^
+include/linux/printk.h:311:9: note: in expansion of macro ‘DEFINE_RATELIMIT_STATE’
+  static DEFINE_RATELIMIT_STATE(_rs,    \
+         ^
+<path>jp_find_get_page_20Dec14/convenient.h:55:9: note: in expansion of macro ‘printk_ratelimited’
+         printk_ratelimited (KERN_INFO pr_fmt(string), ##args);  \
+         ^
+<path>jp_find_get_page_20Dec14/convenient.h:67:4: note: in expansion of macro ‘DBGPRINT’
+    DBGPRINT("%s:%d : " string, __FUNCTION__, __LINE__, ##args);      \
+    ^
+<path>jp_find_get_page_20Dec14/jp_find_get_page_20Dec14.c:62:3: note: in expansion of macro ‘MSG’
+   MSG("host inode : "
+   ^
+<path>jp_find_get_page_20Dec14/jp_find_get_page_20Dec14.c:78:2: warning: ‘return’ with no value, in function returning non-void [-Wreturn-type]
+  return ; //%%%
+  ^
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      <path>jp_find_get_page_20Dec14/jp_find_get_page_20Dec14.mod.o
+  LD [M]  <path>jp_find_get_page_20Dec14/jp_find_get_page_20Dec14.ko
+make[1]: Leaving directory `/usr/src/linux-headers-3.13.0-43-generic'
